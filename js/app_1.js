@@ -26,3 +26,10 @@ featureLayer.on('ready',function(){
   
 });
 
+featureLayer.on('ready',function(){
+  this.eachLayer(function(layer(){
+    layer.bindPopup('Hi, Im the park called' + layer.feature.properties.NAME);
+  });
+});
+
+
